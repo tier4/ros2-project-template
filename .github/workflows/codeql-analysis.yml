@@ -33,9 +33,7 @@ jobs:
       fail-fast: false
       matrix:
         language: [ 'cpp', 'python' ]
-        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python' ]
-        # Learn more:
-        # https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#changing-the-languages-that-are-analyzed
+        ros_distribution: [ 'foxy', 'galactic' ]
 
     steps:
     - name: Checkout repository
@@ -46,15 +44,11 @@ jobs:
       uses: github/codeql-action/init@v1
       with:
         languages: ${{ matrix.language }}
-        # If you wish to specify custom queries, you can do so here or in a config file.
-        # By default, queries listed here will override any specified in a config file.
-        # Prefix the list here with "+" to use these queries and those in the config file.
-        # queries: ./path/to/local/query, your-org/your-repo/queries@main
 
     - name: Setup ROS environment
       uses: ros-tooling/setup-ros@v0.2
       with:
-        required-ros-distributions: foxy
+        required-ros-distributions: ${{ matrix.ros_distribution }}
 
     - name: Search packages in this repository
       id: list_packages
@@ -66,7 +60,7 @@ jobs:
       uses: ros-tooling/action-ros-ci@v0.2
       with:
         package-name: ${{ steps.list_packages.outputs.package_list }}
-        target-ros2-distro: foxy
+        target-ros2-distro: ${{ matrix.ros_distribution }}
         # Set following option if you need.
         # vcs-repo-file-url: build_depends.repos
         # import-token: ${{ secrets.REPO_TOKEN }}
