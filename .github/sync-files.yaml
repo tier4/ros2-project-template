@@ -19,4 +19,4 @@
   files:
     - source: .github/workflows/build-and-test.yaml
     - source: .github/workflows/build-and-test-pr.yaml
-    - source: .clang-format
+    - source: .github/workflows/pre-commit.yaml
