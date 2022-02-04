@@ -17,7 +17,6 @@
 
 - repository: autowarefoundation/autoware_common
   files:
-    - source: .github/workflows/automatic-rebase.yaml
     - source: .github/workflows/build-and-test-arm.yaml
     - source: .github/workflows/build-and-test-arm-pr.yaml
     - source: .github/workflows/build-and-test.yaml
