@@ -26,3 +26,4 @@
   files:
     - source: .github/workflows/cppcheck-all.yaml
     - source: .github/workflows/cppcheck-differential.yaml
+    - source: .cppcheck_suppressions
