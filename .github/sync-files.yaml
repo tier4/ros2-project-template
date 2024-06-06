@@ -21,3 +21,8 @@
     - source: .github/workflows/build-and-test.yaml
     - source: .github/workflows/build-and-test-differential.yaml
     - source: .github/workflows/cancel-previous-workflows.yaml
+
+- repository: autowarefoundation/autoware.universe
+  files:
+    - source: .github/workflows/cppcheck-all.yaml
+    - source: .github/workflows/cppcheck-differential.yaml
