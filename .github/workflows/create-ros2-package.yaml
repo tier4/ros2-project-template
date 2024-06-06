@@ -43,12 +43,12 @@ jobs:
             mkdir src && touch src/.gitkeep
             mkdir include/${{ inputs.package-name}} && touch include/${{ inputs.package-name}}/.gitkeep
             mkdir launch && touch launch/.gitkeep
-            cp ../.template-package/CMakeLists.txt ./CMakeLists.txt
-            cp ../.template-package/package.xml ./package.xml
+            cp ../.template-package/.CMakeLists.txt ./CMakeLists.txt
+            cp ../.template-package/.package.xml ./package.xml
           else
             mkdir msg && touch msg/.gitkeep
-            cp ../.template-interface-package/CMakeLists.txt ./CMakeLists.txt
-            cp ../.template-interface-package/package.xml ./package.xml
+            cp ../.template-interface-package/.CMakeLists.txt ./CMakeLists.txt
+            cp ../.template-interface-package/.package.xml ./package.xml
           fi
 
           sed 's/__PACKAGE_NAME__/package-name/g' ./CMakeLists.txt > "./CMakeLists.txt.tmp"
