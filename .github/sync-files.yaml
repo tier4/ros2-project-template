@@ -4,7 +4,6 @@
     - source: .github/workflows/pre-commit.yaml
     - source: .github/workflows/pre-commit-optional.yaml
     - source: .github/workflows/semantic-pull-request.yaml
-    - source: .github/workflows/spell-check-differential.yaml
     - source: .github/workflows/sync-files.yaml
     - source: .clang-format
     - source: .markdown-link-check.json
@@ -26,4 +25,5 @@
   files:
     - source: .github/workflows/cppcheck-all.yaml
     - source: .github/workflows/cppcheck-differential.yaml
+    - source: .github/workflows/spell-check-partial.yaml
     - source: .cppcheck_suppressions
