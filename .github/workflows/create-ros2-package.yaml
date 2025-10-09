@@ -37,11 +37,11 @@ jobs:
             exit 1
           fi
 
-          mkdir ${{ inputs.package-name}} && cd ${{ inputs.package-name}}
+          mkdir ${{ inputs.package-name }} && cd ${{ inputs.package-name }}
 
           if [[ "${{ inputs.package-name }}" != *_msgs ]]; then
             mkdir src && touch src/.gitkeep
-            mkdir include/${{ inputs.package-name}} && touch include/${{ inputs.package-name}}/.gitkeep
+            mkdir include/${{ inputs.package-name }} && touch include/${{ inputs.package-name }}/.gitkeep
             mkdir launch && touch launch/.gitkeep
             cp ../.template-package/.CMakeLists.txt ./CMakeLists.txt
             cp ../.template-package/.package.xml ./package.xml
@@ -51,9 +51,9 @@ jobs:
             cp ../.template-interface-package/.package.xml ./package.xml
           fi
 
-          sed 's/__PACKAGE_NAME__/package-name/g' ./CMakeLists.txt > "./CMakeLists.txt.tmp"
+          sed 's/__PACKAGE_NAME__/${{ inputs.package-name }}/g' ./CMakeLists.txt > "./CMakeLists.txt.tmp"
           mv "./CMakeLists.txt.tmp" "./CMakeLists.txt"
-          sed -e 's/__PACKAGE_NAME__/package-name/g' -e 's/__MAINTAINER_EMAIL__/maintainer-email/g' -e 's/__MAINTAINER_NAME__/maintainer-name/g' ./package.xml > "./package.xml.tmp"
+          sed -e 's/__PACKAGE_NAME__/${{ inputs.package-name }}/g' -e 's/__MAINTAINER_EMAIL__/${{ inputs.maintainer-email }}/g' -e 's/__MAINTAINER_NAME__/${{ inputs.maintainer-name }}/g' ./package.xml > "./package.xml.tmp"
           mv "./package.xml.tmp" "./package.xml"
 
       - name: Create PR
