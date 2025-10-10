@@ -4,15 +4,15 @@ on:
   workflow_dispatch:
     inputs:
       package-name:
-        description: "Name of the ROS 2 package to create"
+        description: Name of the ROS 2 package to create
         required: true
         type: string
       maintainer-email:
-        description: "Email of the maintainer"
+        description: Email of the maintainer
         required: true
         type: string
       maintainer-name:
-        description: "Name of the maintainer"
+        description: Name of the maintainer
         required: true
         type: string
 
@@ -65,7 +65,7 @@ jobs:
           branch: create-package-${{ inputs.package-name }}
           title: "feat: create ${{ inputs.package-name }} package"
           commit-message: "feat: create ${{ inputs.package-name }} package"
-          body: "Create ${{ inputs.package-name }} package."
+          body: Create ${{ inputs.package-name }} package.
           signoff: true
           delete-branch: true
 
