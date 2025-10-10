@@ -27,4 +27,5 @@
     - source: .github/workflows/cppcheck-differential.yaml
     - source: .github/workflows/spell-check-daily.yaml
     - source: .github/workflows/spell-check-differential.yaml
+    - source: .github/pull_request_template.md
     - source: .cppcheck_suppressions
