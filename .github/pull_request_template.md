@@ -1,47 +1,61 @@
-## PR Type
-
-<!-- Select one and remove others. If an appropriate one is not listed, please write by yourself. -->
-
-- New Feature
-- Improvement
-- Bug Fix
-
-## Related Links
-
-<!-- Please write related links to GitHub/Jira/Slack/etc. -->
-
 ## Description
 
-<!-- Describe what this PR changes. -->
+## Related links
 
-## Review Procedure
+**Parent Issue:**
 
-<!-- Explain how to review this PR. -->
+- Link
 
-## Remarks
+<!-- ⬇️🟢
+**Private Links:**
 
-<!-- Write remarks as you like if you need them. -->
+- [CompanyName internal link]()
+⬆️🟢 -->
 
-## Pre-Review Checklist for the PR Author
+## How was this PR tested?
 
-**PR Author should check the checkboxes below when creating the PR.**
+## Notes for reviewers
 
-- [ ] Assign PR to reviewer
+None.
 
-## Checklist for the PR Reviewer
+## Interface changes
 
-**Reviewers should check the checkboxes below before approval.**
+None.
 
-- [ ] Commits are properly organized and messages are according to the guideline
-- [ ] (Optional) Unit tests have been written for new behavior
-- [ ] PR title describes the changes
+<!-- ⬇️🔴
 
-## Post-Review Checklist for the PR Author
+### Topic changes
 
-**PR Author should check the checkboxes below before merging.**
+#### Additions and removals
 
-- [ ] All open points are addressed and tracked via issues or tickets
+| Change type   | Topic Type      | Topic Name    | Message Type        | Description       |
+|:--------------|:----------------|:--------------|:--------------------|:------------------|
+| Added/Removed | Pub/Sub/Srv/Cli | `/topic_name` | `std_msgs/String`   | Topic description |
 
-## CI Checks
+#### Modifications
 
-- **Build and test for PR**: Required to pass before the merge.
+| Version | Topic Type      | Topic Name        | Message Type        | Description       |
+|:--------|:----------------|:------------------|:--------------------|:------------------|
+| Old     | Pub/Sub/Srv/Cli | `/old_topic_name` | `sensor_msgs/Image` | Topic description |
+| New     | Pub/Sub/Srv/Cli | `/new_topic_name` | `sensor_msgs/Image` | Topic description |
+
+### ROS Parameter Changes
+
+#### Additions and removals
+
+| Change type   | Parameter Name | Type     | Default Value | Description       |
+|:--------------|:---------------|:---------|:--------------|:------------------|
+| Added/Removed | `param_name`   | `double` | `1.0`         | Param description |
+
+#### Modifications
+
+| Version | Parameter Name   | Type     | Default Value | Description       |
+|:--------|:-----------------|:---------|:--------------|:------------------|
+| Old     | `old_param_name` | `double` | `1.0`         | Param description |
+| New     | `new_param_name` | `double` | `1.0`         | Param description |
+
+🔴⬆️ -->
+
+## Effects on system behavior
+
+None.
