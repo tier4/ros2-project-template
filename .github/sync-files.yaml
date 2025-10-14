@@ -25,6 +25,7 @@
   files:
     - source: .github/workflows/cppcheck-weekly.yaml
     - source: .github/workflows/cppcheck-differential.yaml
+    - source: .github/workflows/cppcheck-problem-matcher.json
     - source: .github/workflows/spell-check-daily.yaml
     - source: .github/workflows/spell-check-differential.yaml
     - source: .github/pull_request_template.md
