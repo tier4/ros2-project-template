@@ -1,13 +1,21 @@
-- repository: autowarefoundation/autoware
+- repository: autowarefoundation/sync-file-templates
+  source-dir: sources
   files:
     - source: .github/dependabot.yaml
+    - source: .github/pull_request_template.md
+    - source: .github/workflows/backport.yaml
+    - source: .github/workflows/build-and-test.yaml
+    - source: .github/workflows/build-and-test-differential.yaml
     - source: .github/workflows/pre-commit.yaml
     - source: .github/workflows/pre-commit-optional.yaml
     - source: .github/workflows/semantic-pull-request.yaml
+    - source: .github/workflows/spell-check-daily.yaml
+    - source: .github/workflows/spell-check-differential.yaml
     - source: .github/workflows/sync-files.yaml
     - source: .clang-format
-    - source: .markdown-link-check.json
+    - source: .clang-tidy
     - source: .markdownlint.yaml
+    - source: .pre-commit-config.yaml
     - source: .pre-commit-config-optional.yaml
     - source: .prettierignore
     - source: .prettierrc.yaml
@@ -15,18 +23,9 @@
     - source: CPPLINT.cfg
     - source: setup.cfg
 
-- repository: autowarefoundation/autoware_common
-  files:
-    - source: .github/workflows/build-and-test.yaml
-    - source: .github/workflows/build-and-test-differential.yaml
-    - source: .github/workflows/cancel-previous-workflows.yaml
-
-- repository: autowarefoundation/autoware.universe
+- repository: autowarefoundation/autoware_universe
   files:
     - source: .github/workflows/cppcheck-weekly.yaml
     - source: .github/workflows/cppcheck-differential.yaml
-    - source: .github/workflows/cppcheck-problem-matcher.json
-    - source: .github/workflows/spell-check-daily.yaml
-    - source: .github/workflows/spell-check-differential.yaml
-    - source: .github/pull_request_template.md
+    - source: .github/cppcheck-problem-matcher.json
     - source: .cppcheck_suppressions
